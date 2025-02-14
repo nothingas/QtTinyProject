@@ -8,6 +8,8 @@
 #include <QMouseEvent>
 #include "chooselevel.h"
 #include <QGraphicsScene>
+#include <QEvent>
+#include <QMouseEvent>
 QT_BEGIN_NAMESPACE
 namespace Ui {
 class MainWindow;
@@ -21,11 +23,11 @@ class MainWindow : public QMainWindow
 public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
-    int maxrow, maxcolumn,countmine;
+    int maxrow, maxcolumn,countmine,countinvisible;
 private:
     Ui::MainWindow *ui;
 
-    QList<QList<TBlock *>> mapgenerated(int level);
+    QList<QList<TBlock *>> mapgenerated();
     QList<QList<TBlock *>> map;
     int gamelevel;
     QGraphicsScene *scene;
@@ -35,7 +37,16 @@ private:
     void gameover();
     void checkforwin(TBlock* block);
     void sizeset(int level);
+
+    void leftclicked(int x, int y);
+    void rightclicked(int x, int y);
+
+    void showlose();
+    void showwin();
+protected:
+    void mousePressEvent(QMouseEvent *event);
 public:
-    void mousePressEvent(QEvent* event);
+private slots:
+
 };
 #endif // MAINWINDOW_H

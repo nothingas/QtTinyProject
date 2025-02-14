@@ -1,0 +1,22 @@
+<RCC>
+    <qresource prefix="/pic">
+        <file>images/p1.png</file>
+        <file>images/p2.png</file>
+        <file>images/p3.png</file>
+        <file>images/p4.png</file>
+        <file>images/p5.png</file>
+        <file>images/p6.png</file>
+        <file>images/p7.png</file>
+        <file>images/p8.png</file>
+        <file>images/pask.png</file>
+        <file>images/pflag.png</file>
+        <file>images/ploseface.png</file>
+        <file>images/pmine.png</file>
+        <file>images/pnormal.png</file>
+        <file>images/pnormalface.png</file>
+        <file>images/pwinface.png</file>
+        <file>images/pme.png</file>
+        <file>images/pshow.png</file>
+        <file>images/pback.png</file>
+    </qresource>
+</RCC>
